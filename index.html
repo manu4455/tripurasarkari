@@ -1,44 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head id="site-head">
-    <!-- Page-specific SEO -->
-    <title>Tripura Sarkari – Latest Govt Jobs in Tripura 2025</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#dc2626" />
+
+    <title>Tripura Sarkari | Latest Govt Jobs in Tripura 2025</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": "Tripura Government Jobs 2025",
+        "description": "Latest Tripura Govt Jobs including TPSC, TRBT, Police, Health & Education Departments.",
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": "Tripura Government"
+        },
+        "employmentType": "FULL_TIME",
+        "jobLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Tripura",
+            "addressCountry": "IN"
+          }
+        }
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZBQZF67YQ4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-ZBQZF67YQ4");
+    </script>
+
+    <meta
+      property="og:image"
+      content="https://tripurasarkari.com/icon/favicon-512x512.png"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="http"]');
+
+        links.forEach((link) => {
+          const url = new URL(link.href);
+          const currentDomain = window.location.hostname;
+
+          if (url.hostname !== currentDomain) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+          }
+        });
+      });
+    </script>
+
+    <!-- Meta Description -->
     <meta
       name="description"
-      content="Tripura Sarkari provides latest Tripura Govt Jobs, Central Govt Jobs, Results, Admit Cards & Answer Keys updated daily."
+      content="TripuraSarkari.com - Get all latest Tripura & Central Govt Jobs, Results, Admit Cards, and Answer Keys updates instantly."
     />
+    <meta
+      name="keywords"
+      content="Tripura Jobs, SSC GD, Tripua GK, Tripura Govt Jobs, TPSC, TRBT, Central Govt Jobs, Sarkari Result Tripura, Tripura Recruitment, TripuraJobPortal"
+    />
+    <meta name="author" content="TripuraSarkari.com" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Tripura Job Portal - Latest Govt Jobs 2025"
+    />
+    <meta
+      property="og:description"
+      content="Fast, Simple & Updated Job Portal for Tripura & Central Government Jobs."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tripurasarkari.com/" />
+
+    <style>
+      .site-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .section-card {
+        background: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        border-top-width: 4px;
+      }
+    </style>
+    <!-- ✅ Google AdSense (Auto Ads) -->
+    <!-- <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
+      crossorigin="anonymous"
+    ></script> -->
   </head>
 
   <body class="bg-gray-100 text-gray-800 font-sans">
-    <div class="site-container max-w-[1200px] mx-auto bg-white shadow">
+    <div class="site-container">
+      <!-- Header -->
+      <header
+        class="bg-red-700 text-white text-center py-5 rounded-t-lg shadow"
+      >
+        <h1 class="text-3xl font-bold tracking-wide">
+          Tripura<span class="text-green-300">Sarkari</span>.com
+        </h1>
+        <p class="text-sm opacity-90 mt-1">
+          Fast, Simple & Updated Job Portal for Tripura and Central Government
+        </p>
+      </header>
 
-      <!-- ✅ Shared Header + Navbar -->
-      <div id="site-header"></div>
+      <!-- Navbar -->
+      <nav
+        class="bg-white shadow-md flex flex-wrap justify-center gap-5 py-3 text-sm font-medium border-b"
+      >
+        <a href="index.html" class="text-red-700 hover:text-red-500">🏠 Home</a>
+        <a
+          href="pages/tripura-jobs.html"
+          class="text-gray-700 hover:text-red-600"
+          >Tripura Jobs</a
+        >
+        <a
+          href="pages/central-jobs.html"
+          class="text-gray-700 hover:text-red-600"
+          >Central Jobs</a
+        >
+        <a href="pages/results.html" class="text-gray-700 hover:text-red-600"
+          >Results</a
+        >
+        <a href="pages/admit.html" class="text-gray-700 hover:text-red-600"
+          >Admit Cards</a
+        >
+        <a href="pages/answerkey.html" class="text-gray-700 hover:text-red-600"
+          >Answer Keys</a
+        >
+        <a href="pages/notices.html" class="text-gray-700 hover:text-red-600"
+          >Notices</a
+        >
+        <a href="pages/about.html" class="text-gray-700 hover:text-red-600"
+          >About</a
+        >
+        <a href="pages/contact.html" class="text-gray-700 hover:text-red-600"
+          >Contact</a
+        >
+      </nav>
 
-      <!-- ✅ HERO SECTION (SEO H1 HERE) -->
+      <!-- Hero -->
       <section
         class="text-center py-8 bg-gradient-to-r from-red-600 to-red-800 text-white"
       >
-        <h1 class="text-2xl md:text-3xl font-bold text-green-200 mb-2">
-          Latest Government Jobs in Tripura 2025
-        </h1>
+        <h2 class="text-2xl md:text-3xl font-bold text-green-200 mb-2">
+          🔥 Latest Government Job Updates 2025
+        </h2>
         <p class="text-sm md:text-base opacity-90">
-          Verified Tripura & Central Government job notifications in one place
+          Stay updated with verified notifications for all Government Jobs in
+          Tripura & across India.
         </p>
       </section>
 
-      <!-- 🔥 Top Highlighted Jobs -->
-      <section class="px-6 py-8 m-2 border rounded-lg bg-gray-50">
-        <h2 class="text-xl font-bold text-center mb-4">
-          Top Government Jobs 2025
+      <!-- Top Highlighted Jobs -->
+      <section
+        class="px-6 py-8 m-2 border border-gray-200 rounded-lg bg-gray-50"
+      >
+        <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">
+          🔥 Top Govt Jobs 2025
         </h2>
 
         <div class="grid md:grid-cols-4 gap-6">
-          <article class="section-card border-red-600 p-5">
-            <h3 class="font-semibold text-red-700">
-              SSC GD Constable Recruitment 2026
+          <!-- 🔥 SSC GD -->
+          <div
+            class="section-card border-red-600 p-5 hover:shadow-lg transition rounded-lg"
+          >
+            <h3 class="font-semibold text-red-700 mb-1">
+              SSC GD Constable Recruitment 2025
             </h3>
-            <p class="text-sm text-gray-600">
+            <p class="text-sm text-gray-600 mb-2">
               25,000+ Posts | Last Date: 31 Dec 2025
             </p>
             <a
@@ -47,14 +207,16 @@
             >
               View Details →
             </a>
-          </article>
+          </div>
 
-          <article class="section-card border-indigo-600 p-5">
-            <h3 class="font-semibold text-indigo-700">
-              Intelligence Bureau (IB) MTS 2025
+          <div
+            class="section-card border-indigo-600 p-5 hover:shadow-lg transition rounded-lg"
+          >
+            <h3 class="font-semibold text-indigo-700 mb-1">
+              Intelligence Bureau (IB) MTS Recruitment 2025
             </h3>
-            <p class="text-sm text-gray-600">
-              Group-C | 10th Pass
+            <p class="text-sm text-gray-600 mb-2">
+              Multi-Tasking Staff (General) | Group ‘C’ | 10th Pass
             </p>
             <a
               href="CentralJobs/ib-mts-notice-2025.html"
@@ -62,14 +224,18 @@
             >
               View Details →
             </a>
-          </article>
+          </div>
 
-          <article class="section-card border-indigo-600 p-5">
-            <h3 class="font-semibold text-indigo-700">
-              Indian Air Force AFCAT 01/2026
+          <!-- 🏛️ SEBI -->
+          <!-- ✈️ AFCAT -->
+          <div
+            class="section-card border-indigo-600 p-5 hover:shadow-lg transition rounded-lg"
+          >
+            <h3 class="font-semibold text-indigo-700 mb-1">
+              Indian Air Force AFCAT 01/2026 Recruitment
             </h3>
-            <p class="text-sm text-gray-600">
-              Flying & Ground Duty Posts
+            <p class="text-sm text-gray-600 mb-2">
+              Flying & Ground Duty Posts | Last Date: 14 Dec 2025
             </p>
             <a
               href="CentralJobs/AFCAT-01-2026-Recruitment.html"
@@ -77,107 +243,619 @@
             >
               View Details →
             </a>
-          </article>
+          </div>
         </div>
       </section>
 
-      <!-- 📂 MAIN CONTENT -->
+      <!-- Main Content Sections -->
       <main class="px-6 py-10 grid md:grid-cols-3 gap-6">
-
         <!-- Tripura Jobs -->
-        <section class="section-card border-red-600 p-5">
-          <h2 class="text-xl font-semibold text-red-700 mb-3">
-            Tripura Govt Jobs
-          </h2>
+        <div class="section-card border-red-600 p-5">
+          <h3 class="text-xl font-semibold text-red-700 mb-3">
+            📍 Tripura Govt Jobs
+          </h3>
+
           <ul class="divide-y text-sm">
-            <li class="py-3">
+            <!-- NEWEST FIRST -->
+
+            <li class="py-3 px-2 rounded-lg hover:bg-red-50 transition">
               <a
                 href="TripuraJobs/TPSC-Assistant-Controller-of-Examinations-Deputation-2025.html"
-                class="text-blue-700 hover:underline"
+                target="_blank"
+                class="flex justify-between items-start gap-3 text-blue-700 hover:text-red-700"
               >
-                Assistant Controller of Examinations – TPSC
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-2">
+                    <span class="font-medium">
+                      Assistant Controller of Examinations (Deputation),
+                      Group-B, Gazetted – TPSC
+                    </span>
+                    <span
+                      class="bg-red-100 text-red-700 text-[10px] font-semibold px-2 py-0.5 rounded-md"
+                    >
+                      NEW
+                    </span>
+                  </div>
+                  <span class="text-xs text-gray-500 mt-1">
+                    Tripura Public Service Commission
+                  </span>
+                </div>
+
+                <span class="text-xs text-gray-400 whitespace-nowrap">
+                  06 Dec 2025
+                </span>
               </a>
             </li>
-            <li class="py-3">
+
+            <li class="py-3 px-2 rounded-lg hover:bg-red-50 transition">
               <a
                 href="TripuraJobs/TPSC-Project-Officer-Recruitment-2025.html"
-                class="text-blue-700 hover:underline"
+                target="_blank"
+                class="flex justify-between items-start gap-3 text-blue-700 hover:text-red-700"
               >
-                Project Officer – Directorate of Biotechnology
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-2">
+                    <span class="font-medium">
+                      Project Officer (Group-A, Gazetted) – Directorate of
+                      Biotechnology, TPSC
+                    </span>
+                    <span
+                      class="bg-red-100 text-red-700 text-[10px] font-semibold px-2 py-0.5 rounded-md"
+                    >
+                      NEW
+                    </span>
+                  </div>
+                  <span class="text-xs text-gray-500 mt-1">
+                    Tripura Public Service Commission
+                  </span>
+                </div>
+
+                <span class="text-xs text-gray-400 whitespace-nowrap">
+                  05 Dec 2025
+                </span>
+              </a>
+            </li>
+
+            <!-- <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="TripuraJobs/TPSC-Project-Officer-Recruitment-2025.html"
+                target="_blank"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span class="flex items-center gap-2">
+                  Project Officer (Group-A, Gazetted) – Directorate of
+                  Biotechnology, TPSC
+                  <span
+                    class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full animate-pulse"
+                  >
+                    NEW
+                  </span>
+                </span>
+                <span class="text-xs text-gray-500">05 Dec 2025</span>
+              </a>
+            </li> -->
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="TripuraJobs/TPSC-Inspector-of-Factories-Recruitment-2025.html"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Inspector of Factories (Group-A, Gazetted) – TPSC (Advt.
+                  No-27/2025)
+                </span>
+                <span class="text-xs text-gray-500">Nov 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="javascript:void(0)"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Medical Officer (Dental), Grade-IV (TDS) – TPSC (Advt.
+                  No-26/2025)
+                </span>
+                <span class="text-xs text-gray-500">Nov 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="javascript:void(0)"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Personal Assistant (PA-II), Group-C – TPSC (Advt. No-25/2025)
+                </span>
+                <span class="text-xs text-gray-500">Nov 2025</span>
               </a>
             </li>
           </ul>
+
           <a
             href="pages/tripura-jobs.html"
-            class="block text-red-600 font-semibold text-sm mt-3 text-right"
+            class="block text-red-600 font-semibold text-sm mt-3 hover:underline text-right"
           >
             View More →
           </a>
-        </section>
+        </div>
 
         <!-- Central Jobs -->
-        <section class="section-card border-yellow-500 p-5">
-          <h2 class="text-xl font-semibold text-yellow-600 mb-3">
-            Central Govt Jobs
-          </h2>
+        <div class="section-card border-yellow-500 p-5">
+          <h3 class="text-xl font-semibold text-yellow-600 mb-3">
+            🌐 Central Govt Jobs
+          </h3>
+
           <ul class="divide-y text-sm">
-            <li class="py-3">
+            <!-- NEWEST FIRST -->
+
+            <!--December 2025-->
+
+            <li class="py-3 hover:bg-gray-50 transition">
               <a
                 href="CentralJobs/SSC-GD-Constable-Recruitment-2026.html"
-                class="text-blue-600 hover:underline"
+                target="_blank"
+                class="flex justify-between items-center text-blue-600 hover:underline"
               >
-                SSC GD Constable Recruitment 2026
+                <span>
+                  SSC GD Constable Recruitment 2026 – CAPFs, SSF & Assam Rifles
+                  (25,000+ Posts)
+                </span>
+                <span class="text-xs text-gray-500">31 Dec 2025</span>
               </a>
             </li>
-            <li class="py-3">
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="CentralJobs/SBI-Wealth-Management-Recruitment-2025.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  SBI Wealth Management Recruitment 2025 – VP, AVP & Customer
+                  Relationship Executive (Contract Basis)
+                </span>
+                <span class="text-xs text-gray-500">02 Dec 2025</span>
+              </a>
+            </li>
+            <li class="py-3 hover:bg-gray-50 transition">
               <a
                 href="CentralJobs/AFCAT-01-2026-Recruitment.html"
-                class="text-blue-600 hover:underline"
+                target="_blank"
+                class="flex justify-between items-center text-blue-600 hover:underline"
               >
-                Indian Air Force AFCAT 01/2026
+                <span>
+                  Indian Air Force AFCAT 01/2026 Recruitment – Flying & Ground
+                  Duty Posts
+                </span>
+                <span class="text-xs text-gray-500">14 Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="CentralJobs/ib-mts-notice-2025.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Intelligence Bureau (IB) MTS (General) Recruitment 2025 –
+                  Group ‘C’ Non-Gazetted Posts
+                </span>
+                <span class="text-xs text-gray-500">22 Nov 2025</span>
+              </a>
+            </li>
+            <!--December 2025-->
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="javascript:void(0)"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Assistant Manager Grade ‘A’ – NABARD Recruitment 2025 (91
+                  Posts)
+                </span>
+                <span class="text-xs text-gray-500">30 Nov 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="javascript:void(0)"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  SEBI Assistant Manager Grade A Recruitment 2025 (30 Posts)
+                </span>
+                <span class="text-xs text-gray-500">28 Nov 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="javascript:void(0)"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span> CCRH LDC & Driver Recruitment 2025 (90 Posts) </span>
+                <span class="text-xs text-gray-500">26 Nov 2025</span>
               </a>
             </li>
           </ul>
+
           <a
             href="pages/central-jobs.html"
-            class="block text-yellow-600 font-semibold text-sm mt-3 text-right"
+            class="block text-yellow-600 font-semibold text-sm mt-3 hover:underline text-right"
           >
             View More →
           </a>
-        </section>
+        </div>
 
         <!-- Notices -->
-        <section class="section-card border-red-600 p-5">
-          <h2 class="text-xl font-semibold text-red-700 mb-3">
-            Latest Notices
-          </h2>
+        <div class="section-card border-red-600 p-5">
+          <h3 class="text-xl font-semibold text-red-700 mb-3">
+            📢 Latest Notices & Announcements
+          </h3>
           <ul class="divide-y text-sm">
-            <li class="py-3">
+            <li class="py-3 hover:bg-gray-50 transition">
               <a
-                href="https://tpsc.tripura.gov.in/"
+                href="https://tpsc.tripura.gov.in/sites/default/files/Notif_DIET_151225.pdf"
                 target="_blank"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Notification regarding Scheme of Examination for recruitment
+                  to the post of Lecturer, DIET (Advt. No-15/2025)
+                </span>
+                <span class="text-xs text-gray-500">15 Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Auditor_151225.pdf"
+                target="_blank"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Provisional Answer Key for Departmental Examination of
+                  in-service Auditors, Grade-V (Paper-I & II), November 2025
+                </span>
+                <span class="text-xs text-gray-500">15 Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/P_Ans_AAO_151225.pdf"
+                target="_blank"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Provisional Answer Key for Departmental Examination of
+                  in-service Assistant Audit/Accounts Officer, Grade-V (Paper-I
+                  & II), November 2025
+                </span>
+                <span class="text-xs text-gray-500">15 Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Cutoff_TCS_TPS_04_16_151225.pdf"
+                target="_blank"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Summary of Main Examination for recruitment to the TCS & TPS,
+                  Grade-II (Advt. No-04/2016)
+                </span>
+                <span class="text-xs text-gray-500">15 Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Tend_Sweep_151225_0.pdf"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Notice inviting quotation for providing manpower for Cleaning
+                  and Sweeping works in TPSC
+                </span>
+                <span class="text-xs text-gray-500">Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Score_Sum_04_2016_081225.pdf"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Notification regarding score summary of candidates for
+                  recruitment to the TCS & TPS, Grade-II (Advt. No-04/2016)
+                </span>
+                <span class="text-xs text-gray-500">Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Notif_ACE_TPSC__061225.pdf"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Notification for recruitment on deputation basis to the post
+                  of Assistant Controller of Examinations under TPSC
+                </span>
+                <span class="text-xs text-gray-500">Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Advt_28_2025__051225.pdf"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Advertisement for recruitment to the post of Project Officer,
+                  Group-A Gazetted, Directorate of Biotechnology (Advt.
+                  No-28/2025)
+                </span>
+                <span class="text-xs text-gray-500">Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/2025-12/Prog_Agri_031225.pdf"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Programme of written examination for recruitment to the post
+                  of Assistant Controller of Examinations under TPSC
+                </span>
+                <span class="text-xs text-gray-500">Dec 2025</span>
+              </a>
+            </li>
+
+            <li class="py-3 hover:bg-gray-50 transition">
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Tentv_Exam_021225.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span>
+                  Notification regarding tentative schedule of
+                  written/preliminary examination of various recruitment process
+                  under TPSC
+                </span>
+                <span class="text-xs text-gray-500">02 Dec 2025</span>
+              </a>
+            </li>
+          </ul>
+
+          <a
+            href="pages/notices.html"
+            class="block text-red-600 font-semibold text-sm mt-3 hover:underline text-right"
+            >View More →</a
+          >
+        </div>
+
+        <!-- 📊 Results -->
+        <div class="section-card border-green-600 p-5">
+          <h3 class="text-xl font-semibold text-green-700 mb-3">
+            📊 Latest Results
+          </h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Cutoff_TCS_TPS_04_16_151225.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-600 hover:underline"
               >
-                TPSC Notifications & Exam Updates
+                Summary of Main Examination for recruitment to the TCS & TPS,
+                Grade-II (Advt. No-04/2016)
+                <span class="text-xs text-gray-500">– 15 Dec 2024</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Score_Sum_04_2016_081225.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                Score Summary of candidates for recruitment to the TCS & TPS,
+                Grade-II (Advt. No-04/2016)
+                <span class="text-xs text-gray-500">– 08 Dec 2024</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Recom_TCS_TPS_16_011225.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                Recommendation List for recruitment to the Tripura Civil Service
+                (TCS) & Tripura Police Service (TPS), Grade-II (Advt.
+                No-04/2016)
+                <span class="text-xs text-gray-500">– 01 Dec 2025</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Recom_Principal_011225_0.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                Recommendation List for the post of Principal, Group-A, Gazetted
+                (Advt. No-06/2025)
+                <span class="text-xs text-gray-500">– 01 Dec 2025</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://download.onlineregistrationindia.com/EventSelection?ClientCode=C1002"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                Score Summary of candidates for the post of Programmer &
+                Assistant Programmer (Advt. No-09/2024 & Advt. No-10/2024)
+                <span class="text-xs text-gray-500"> – Nov 2025</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Cut_off_11_2024_241125.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                Summary of written examination for recruitment to the post of
+                Senior Informatics Officer (Advt. No-11/2024)
+                <span class="text-xs text-gray-500"> – 24 Nov 2025</span>
               </a>
             </li>
           </ul>
           <a
-            href="pages/notices.html"
-            class="block text-red-600 font-semibold text-sm mt-3 text-right"
+            href="pages/results.html"
+            class="block text-green-600 font-semibold text-sm mt-3 hover:underline text-right"
+            >View More →</a
           >
-            View More →
-          </a>
-        </section>
+        </div>
 
+        <!-- 🎟️ Admit Cards -->
+        <div class="section-card border-blue-600 p-5">
+          <h3 class="text-xl font-semibold text-blue-700 mb-3">
+            🎟️ Admit Cards
+          </h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/Noti_Deptt._211125.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                Notification regarding Provisional Admission Certificate of
+                various Departmental Examination under TPSC
+                <span class="text-xs text-gray-500"> – 21 Nov 2025</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:void(0)" class="text-blue-600 hover:underline"
+                >Provisional Admission Certificate of Main Examination –
+                Miscellaneous Posts (Advt. No-13/2023)</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="text-blue-600 hover:underline"
+                >Programme of Interview/Personality Test – TCS & TPS, Grade-II
+                (Advt. No-04/2016)</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="text-blue-600 hover:underline"
+                >Programme of Interview/Personality Test – Principal, Govt.
+                Degree Colleges (Advt. No-06/2025)</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="text-blue-600 hover:underline"
+                >Programme of Interview/Personality Test – GDMO, Gr-IV of THS
+                (Advt. No-07/2024)</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="text-blue-600 hover:underline"
+                >Programme of Interview/Personality Test – GDMO, Gr-IV (Advt.
+                No-07/2024)</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="text-blue-600 hover:underline"
+                >Notification regarding Provisional Admission Certificate –
+                GDMO, Gr-IV (Advt. No-07/2024)</a
+              >
+            </li>
+          </ul>
+          <a
+            href="pages/admit.html"
+            class="block text-blue-600 font-semibold text-sm mt-3 hover:underline text-right"
+            >View More →</a
+          >
+        </div>
+
+        <!-- 📝 Answer Keys -->
+        <div class="section-card border-purple-600 p-5">
+          <h3 class="text-xl font-semibold text-purple-700 mb-3">
+            📝 Answer Keys
+          </h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/P_Ans_Auditor_151225.pdf"
+                class="text-blue-600 hover:underline"
+              >
+                Provisional Answer Key for Departmental Examination of
+                in-service Auditors, Grade-V (Paper-I & II), November 2025
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://tpsc.tripura.gov.in/sites/default/files/P_Ans_AAO_151225.pdf"
+                class="text-blue-600 hover:underline"
+              >
+                Provisional Answer Key for Departmental Examination of
+                in-service Assistant Audit/Accounts Officer, Grade-V (Paper-I &
+                II), November 2025
+              </a>
+            </li>
+          </ul>
+          <a
+            href="pages/answerkey.html"
+            class="block text-purple-600 font-semibold text-sm mt-3 hover:underline text-right"
+            >View More →</a
+          >
+        </div>
       </main>
 
-      <!-- ✅ Shared Footer -->
-      <div id="site-footer"></div>
-
+      <!-- Footer -->
+      <footer
+        class="bg-gray-800 text-white text-center text-sm py-6 rounded-b-lg"
+      >
+        <div class="space-x-3 mb-2">
+          <a href="pages/privacy-policy.html" class="hover:underline"
+            >Privacy Policy</a
+          >
+          |
+          <a href="pages/terms.html" class="hover:underline"
+            >Terms & Conditions</a
+          >
+          | <a href="pages/about.html" class="hover:underline">About</a> |
+          <a href="pages/contact.html" class="hover:underline">Contact</a>
+        </div>
+        <p>
+          © 2025 <strong>TripuraSarkari.com</strong> | Made with ❤️ in Tripura
+        </p>
+      </footer>
     </div>
-
-    <!-- ✅ Shared Loader -->
-    <script src="/js/include.js"></script>
   </body>
 </html>
