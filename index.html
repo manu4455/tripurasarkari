@@ -501,6 +501,32 @@
           <ul class="divide-y text-sm">
             <!-- NEWEST FIRST -->
             <!--January 2026-->
+            <li
+              class="py-3 hover:bg-gray-50 transition"
+              data-publish-date="2025-12-30"
+            >
+              <a
+                href="CentralJobs/rrb-isolated-categories-recruitment-2026-cen-08-2025.html"
+                target="_blank"
+                class="flex justify-between items-center text-blue-600 hover:underline"
+              >
+                <span class="flex items-center gap-2">
+                  <span>
+                    RRB Isolated Categories Recruitment 2026 (CEN 08/2025) – 312
+                    Posts
+                  </span>
+
+                  <span
+                    class="new-badge bg-red-100 text-red-700 text-[10px] font-semibold px-2 py-0.5 rounded"
+                  >
+                    NEW
+                  </span>
+                </span>
+
+                <span class="text-xs text-gray-500">30 Dec 2025</span>
+              </a>
+            </li>
+
             <li class="py-3 hover:bg-gray-50 transition">
               <a
                 href="CentralJobs/rbi-office-attendant-recruitment-2026.html"
@@ -1038,5 +1064,20 @@
         </p>
       </footer>
     </div>
+    <script>
+      const NEW_DAYS = 7; // 🔥 change this number (e.g. 3, 5, 7, 10)
+
+      document.querySelectorAll("[data-publish-date]").forEach((item) => {
+        const publishDate = new Date(item.dataset.publishDate);
+        const today = new Date();
+
+        const diffDays = (today - publishDate) / (1000 * 60 * 60 * 24);
+
+        if (diffDays > NEW_DAYS) {
+          const badge = item.querySelector(".new-badge");
+          if (badge) badge.remove();
+        }
+      });
+    </script>
   </body>
 </html>
