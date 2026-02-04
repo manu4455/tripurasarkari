@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TripuraSarkari.com | Photo & Signature Tool</title>
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta
+      name="description"
+      content="Resize passport photo and signature for SSC, UPSC, RRB, SBI and other government exams."
+    />
+    <title>
+      Photo & Signature Resize Tool for SSC, UPSC, RRB, SBI | TripuraSarkari
+    </title>
+
+    <meta
+      name="description"
+      content="Free online passport photo and signature resize tool for SSC, UPSC, RRB, SBI, TPSC and all government exams. Resize image to exact KB size, remove background, change background color, 100% client-side."
+    />
+
+    <meta
+      name="keywords"
+      content="photo resize for ssc, signature resize for ssc, passport photo resize online, exam photo resize tool, ssc photo size 20-100 kb, upsc photo resize, rrb photo signature resize, government exam photo tool, tripura sarkari photo tool"
+    />
+
+    <link
+      rel="canonical"
+      href="https://tripurasarkari.com/pages/Image-resize.html"
+    />
+
+    <style>
+      .site-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="site-container">
+      <!-- Header -->
+      <header
+        class="bg-red-700 text-white text-center py-4 shadow-md rounded-t-lg"
+      >
+        <h1 class="text-3xl font-bold">
+          Tripura<span class="text-yellow-300">Sarkari</span>.com
+        </h1>
+        <p class="text-sm mt-1">Government Exam Photo & Signature Tool</p>
+      </header>
+
+      <!-- Navbar -->
+      <nav
+        class="bg-white shadow flex flex-wrap justify-center gap-4 py-3 text-sm font-medium border-b"
+      >
+        <a href="../index.html" class="text-red-700 hover:text-red-500"
+          >🏠 Home</a
+        >
+        <a href="tripura-jobs.html" class="text-gray-700 hover:text-red-600"
+          >Tripura Jobs</a
+        >
+        <a href="central-jobs.html" class="text-gray-700 hover:text-red-600"
+          >Central Jobs</a
+        >
+        <a href="results.html" class="text-gray-700 hover:text-red-600"
+          >Results</a
+        >
+        <a href="admit.html" class="text-gray-700 hover:text-red-600"
+          >Admit Cards</a
+        >
+        <a href="answerkey.html" class="text-gray-700 hover:text-red-600"
+          >Answer Keys</a
+        >
+        <a href="notices.html" class="text-gray-700 hover:text-red-600"
+          >Notices</a
+        >
+        <a href="about.html" class="text-gray-700 hover:text-red-600">About</a>
+        <a href="contact.html" class="text-gray-700 hover:text-red-600"
+          >Contact</a
+        >
+      </nav>
+
+      <!-- Page Intro -->
+      <section
+        class="text-center py-6 bg-gradient-to-r from-green-600 to-green-700 text-white"
+      >
+        <h2 class="text-2xl font-bold mb-2">
+          📸 Photo & Signature Resize Tool
+        </h2>
+        <p class="text-sm opacity-90">
+          Prepare exam-ready passport photo and signature for all government
+          forms
+        </p>
+      </section>
+
+      <!-- Main Content -->
+      <main class="px-6 py-8 space-y-8">
+        <!-- PHOTO TOOL -->
+        <div class="bg-white rounded-lg shadow-md p-5">
+          <h3 class="text-lg font-semibold text-green-700 mb-4 border-b pb-2">
+            Passport Size Photograph
+          </h3>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium"
+                >Upload Photo (JPG/JPEG)</label
+              >
+              <input
+                type="file"
+                id="photoInput"
+                accept="image/jpeg"
+                class="mt-2"
+              />
+
+              <label class="block text-sm font-medium mt-4">Photo Size</label>
+              <select id="photoPreset" class="mt-2 w-full border rounded p-2">
+                <option value="320x400">320 × 400 (4:5)</option>
+                <option value="240x300">240 × 300 (4:5)</option>
+              </select>
+
+              <label class="block text-sm font-medium mt-4"
+                >Face Zoom (70–80%)</label
+              >
+              <input
+                type="range"
+                id="faceZoom"
+                min="70"
+                max="80"
+                value="75"
+                class="w-full"
+              />
+              <p class="text-xs text-gray-600 text-right">
+                Zoom: <span id="zoomVal">75%</span>
+              </p>
+
+              <label class="block text-sm font-medium mt-4">Background</label>
+              <select id="bgMode" class="mt-2 w-full border rounded p-2">
+                <option value="white">Pure White</option>
+                <option value="light">Light Neutral</option>
+              </select>
+
+              <button
+                onclick="processPhoto()"
+                class="mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+              >
+                Process Photo
+              </button>
+              <button
+                onclick="download(photoCanvas, 'passport_photo.jpg')"
+                class="mt-2 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+              >
+                Download Photo
+              </button>
+            </div>
+
+            <div>
+              <canvas id="photoCanvas" class="border w-full"></canvas>
+              <p class="text-xs text-gray-600 mt-1">
+                File size: <span id="photoSize">0 KB</span>
+              </p>
+              <div class="flex gap-2 mt-2">
+                <input
+                  type="number"
+                  id="photoTargetKB"
+                  placeholder="Target KB (e.g. 50)"
+                  class="border rounded p-1 w-full text-sm"
+                />
+                <button
+                  onclick="
+                    adjustToTarget(photoCanvas, 'photoSize', 'photoTargetKB')
+                  "
+                  class="bg-purple-600 text-white px-3 py-1 rounded text-sm"
+                >
+                  Adjust
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIGNATURE TOOL -->
+        <div class="bg-white rounded-lg shadow-md p-5">
+          <h3 class="text-lg font-semibold text-green-700 mb-4 border-b pb-2">
+            Scanned Signature
+          </h3>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium"
+                >Upload Signature (JPG/JPEG)</label
+              >
+              <input
+                type="file"
+                id="signInput"
+                accept="image/jpeg"
+                class="mt-2"
+              />
+
+              <label class="block text-sm font-medium mt-4"
+                >Signature Size</label
+              >
+              <select id="signPreset" class="mt-2 w-full border rounded p-2">
+                <option value="300x120">300 × 120 (5:2)</option>
+                <option value="500x200">500 × 200 (5:2)</option>
+              </select>
+
+              <button
+                onclick="processSignature()"
+                class="mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+              >
+                Process Signature
+              </button>
+              <button
+                onclick="download(signCanvas, 'signature.jpg')"
+                class="mt-2 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+              >
+                Download Signature
+              </button>
+            </div>
+
+            <div>
+              <canvas id="signCanvas" class="border w-full"></canvas>
+              <p class="text-xs text-gray-600 mt-1">
+                File size: <span id="signSize">0 KB</span>
+              </p>
+              <div class="flex gap-2 mt-2">
+                <input
+                  type="number"
+                  id="signTargetKB"
+                  placeholder="Target KB (e.g. 30)"
+                  class="border rounded p-1 w-full text-sm"
+                />
+                <button
+                  onclick="
+                    adjustToTarget(signCanvas, 'signSize', 'signTargetKB')
+                  "
+                  class="bg-purple-600 text-white px-3 py-1 rounded text-sm"
+                >
+                  Adjust
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="../index.html"
+            class="inline-block bg-gray-700 text-white px-6 py-2 rounded hover:bg-gray-800"
+            >Back to Home</a
+          >
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        class="bg-gray-800 text-white text-center text-sm py-4 mt-6 rounded-b-lg"
+      >
+        © 2026 TripuraSarkari.com | Exam Utilities
+      </footer>
+    </div>
+
+    <script>
+      // STORE FINAL LOCKED DATA
+      let finalPhotoData = null;
+      let finalSignData = null;
+
+      faceZoom.oninput = () => (zoomVal.innerText = faceZoom.value + "%");
+
+      function processPhoto() {
+        const f = photoInput.files[0];
+        if (!f) return alert("Upload photo");
+        const [W, H] = photoPreset.value.split("x").map(Number);
+        const z = faceZoom.value / 100;
+        const bg = bgMode.value;
+        const img = new Image();
+        img.onload = () => {
+          const c = photoCanvas,
+            ctx = c.getContext("2d");
+          c.width = W;
+          c.height = H;
+          ctx.fillStyle = bg === "white" ? "#fff" : "#f2f2f2";
+          ctx.fillRect(0, 0, W, H);
+          const s = (H * z) / img.height;
+          const iw = img.width * s,
+            ih = img.height * s;
+          ctx.drawImage(img, (W - iw) / 2, (H - ih) / 2, iw, ih);
+          updateSize(c, "photoSize");
+        };
+        img.src = URL.createObjectURL(f);
+      }
+
+      function processSignature() {
+        const f = signInput.files[0];
+        if (!f) return alert("Upload signature");
+        const [W, H] = signPreset.value.split("x").map(Number);
+        const img = new Image();
+        img.onload = () => {
+          const c = signCanvas,
+            ctx = c.getContext("2d");
+          c.width = W;
+          c.height = H;
+          ctx.fillStyle = "#fff";
+          ctx.fillRect(0, 0, W, H);
+          const s = Math.min(W / img.width, H / img.height) * 0.9;
+          ctx.drawImage(
+            img,
+            (W - img.width * s) / 2,
+            (H - img.height * s) / 2,
+            img.width * s,
+            img.height * s,
+          );
+          updateSize(c, "signSize");
+        };
+        img.src = URL.createObjectURL(f);
+      }
+
+      function updateSize(canvas, el) {
+        const d = canvas.toDataURL("image/jpeg", 0.9);
+        const kb = Math.round((d.length * 3) / 4 / 1024);
+        document.getElementById(el).innerText = kb + " KB";
+      }
+
+      function autoAdjustSize(canvas, minKB = 20, maxKB = 100) {
+        let quality = 0.95;
+        let dataURL, sizeKB;
+        do {
+          dataURL = canvas.toDataURL("image/jpeg", quality);
+          sizeKB = Math.round((dataURL.length * 3) / 4 / 1024);
+          if (sizeKB > maxKB) quality -= 0.05;
+          else if (sizeKB < minKB) quality += 0.02;
+          if (quality > 1) quality = 1;
+          if (quality < 0.2) break;
+        } while (sizeKB < minKB || sizeKB > maxKB);
+        return { dataURL, sizeKB };
+      }
+
+      function adjustToTarget(canvas, sizeEl, inputEl) {
+        const target = parseInt(document.getElementById(inputEl).value);
+        if (!target || target <= 0) return alert("Enter valid KB");
+
+        let quality = 0.95;
+        let dataURL, sizeKB;
+
+        for (let i = 0; i < 40; i++) {
+          dataURL = canvas.toDataURL("image/jpeg", quality);
+          sizeKB = Math.round((dataURL.length * 3) / 4 / 1024);
+
+          if (Math.abs(sizeKB - target) <= 1) break;
+          if (sizeKB > target) quality -= 0.03;
+          else quality += 0.02;
+
+          if (quality > 1) quality = 1;
+          if (quality < 0.15) break;
+        }
+
+        // LOCK FINAL DATA (IMPORTANT)
+        if (canvas.id === "photoCanvas") {
+          finalPhotoData = dataURL;
+        } else if (canvas.id === "signCanvas") {
+          finalSignData = dataURL;
+        }
+
+        document.getElementById(sizeEl).innerText = sizeKB + " KB";
+      }
+
+      const img = new Image();
+      img.onload = () => {
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        document.getElementById(sizeEl).innerText = sizeKB + " KB";
+      };
+      img.src = dataURL;
+
+      function download(canvas, name) {
+        let data = null;
+
+        if (canvas.id === "photoCanvas" && finalPhotoData) {
+          data = finalPhotoData;
+        } else if (canvas.id === "signCanvas" && finalSignData) {
+          data = finalSignData;
+        } else {
+          data = canvas.toDataURL("image/jpeg", 0.95);
+        }
+
+        const a = document.createElement("a");
+        a.href = data;
+        a.download = name;
+        a.click();
+      }
+    </script>
+  </body>
+</html>
